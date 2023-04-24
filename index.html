@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_layout.0d703c0d.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.75c7242b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.06967d51.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.9a290cbb.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.5de82c94.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.8ab0304e.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.ts.984db11e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_page.svelte.746a3019.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<h1 class="text-center text-xl m-6">fractal-friends</h1>
+<div class="text-center m-4 space-y-2"><div><label for="palette">Palette</label>
+        <select class="p-1 rounded text-center" name="palette"><option value="Honeydew">Honeydew</option><option value="Blue">Blue</option><option value="Volcanic">Volcanic</option><option value="Spicy">Spicy</option><option value="Sweet">Sweet</option><option value="Coquelicot">Coquelicot</option></select></div>
+    <div><label for="maxIters">Max iterations</label>
+        <input class="p-1 rounded border border-gray-200 w-20" type="number" name="maxIters" value="50"></div>
+    <div class="flex flex-row justify-center space-x-4"><label for="curveParam">Color fade:</label>
+        <input class="p-1" type="range" min="-1" max="0" step="0.01" value="-0.5"></div></div>
+<div class="flex flex-row justify-center flex-wrap space-2"><div class="flex justify-center align-center m-1 p-2 drop-shadow rounded-md" style="background-color: rgba(88, 111, 124, 255);"><canvas class="cursor-pointer"></canvas></div>
+    <div class="relative justify-center align-center"><div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center rounded-md bg-white p-4 bg-opacity-20"><p>Click on the Mandelbrot set to see the corresponding Julia set</p></div>
+        <div class="flex justify-center align-center m-1 p-2 drop-shadow rounded-md" style="background-color: rgba(88, 111, 124, 255);"><canvas class=""></canvas></div></div></div>
+
+
+			
+			<script>
+				{
+					__sveltekit_1di388o = {
+						assets: "/fractal-friends",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.75c7242b.js"),
+						import("./_app/immutable/entry/app.5de82c94.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
