@@ -40,7 +40,7 @@
     $: updateMaxIters(maxIters);
 
     function updateMaxIters(maxIters: number) {
-        console.log("Updating max iterations");
+        // console.log("Updating max iterations");
         if (mandelbrot) {
             mandelbrot.maxIterations = maxIters;
             drawMandelbrot();
@@ -95,26 +95,26 @@
         pageLoaded = true;
 
         window.addEventListener("resize", () => {
-            console.log("Resizing");
+            // console.log("Resizing");
             const displayWidth = Math.min(
                 window.innerWidth * canvas_relwidth,
                 canvas_maxwidth
             );
             mandelbrot.setDistancePerPixel(mandelbrotBoundingBox.width / displayWidth);
-            drawMandelbrot();
             mandelbrotCanvas.width = mandelbrot.width;
             mandelbrotCanvas.height = mandelbrot.height;
+            drawMandelbrot();
             julia.setDistancePerPixel(juliaBoundingBox.width / displayWidth);
+            juliaCanvas.width = julia.width;
+            juliaCanvas.height = julia.height;
             if (julia.c) {
                 drawJulia(julia.c);
             }
-            juliaCanvas.width = julia.width;
-            juliaCanvas.height = julia.height;
         });
     });
 
     function drawMandelbrot(rerender: boolean = true) {
-        console.log("Drawing mandelbrot");
+        // console.log("Drawing mandelbrot");
         if (!mandelbrotCtx) {
             throw new Error("No mandelbrot context");
         }
@@ -177,7 +177,7 @@
             // drawTriangle(mandelbrotCtx, e.offsetX, e.offsetY);
         }
         else {
-            console.log("No mandelbrot context");
+            throw new Error("No mandelbrot context");
         }
         drawJulia(c);
     }
@@ -216,4 +216,8 @@
             <canvas class="" bind:this={juliaCanvas}></canvas>
         </div>
     </div>
+</div>
+
+<div class="m-6 text-center">
+    <a class="text-gray-400 hover:font-bold" href="https://quevivasbien.github.io/posts/fractal-friends/" target="_blank">What is this?</a>
 </div>
