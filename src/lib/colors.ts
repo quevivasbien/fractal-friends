@@ -63,10 +63,10 @@ function paletteFromHex(hexColors: Array<string>) {
 type Palette = Array<Color>;
 
 export const palettes: Record<string, Palette> = {
-    "Honeydew": paletteFromHex(["ffffff","e9fae3","dee8d5","d5c7bc","ac92a6"]),
+    "Honeydew": paletteFromHex(["e1efe6","efcb68","aeb7b3","000411","d6eaff"]),
     "Blue" : paletteFromHex(["03256c","2541b2","1768ac","06bee1","ffffff"]),
     "Volcanic": paletteFromHex(["586f7c","0d1317","bbc5aa","a72608","090c02"]),
-    "Spicy": paletteFromHex(["e1ce7a","fbffb9","fdd692","ec7357","754f44"]),
+    "Spicy": paletteFromHex(["ffffff","f7f7f7","efa00b","d65108","591f0a"]),
     "Sweet": paletteFromHex(["eb5e55","3a3335","d81e5b","fdf0d5","c6d8d3"]),
     "Coquelicot": paletteFromHex(["ffffff","f15025","e6e8e6","ced0ce","191919"]),
 }
