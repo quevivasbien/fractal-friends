@@ -155,16 +155,6 @@
         ctx.stroke();
     }
 
-    function drawTriangle(ctx: CanvasRenderingContext2D, x: number, y: number, color: string = "red") {
-        ctx.strokeStyle = color;
-        ctx.beginPath();
-        ctx.moveTo(x - 5, y - 5);
-        ctx.lineTo(x + 5, y - 5);
-        ctx.lineTo(x, y + 5);
-        ctx.lineTo(x - 5, y - 5);
-        ctx.fill();
-    }
-
     function onMandelbrotCanvasClick(e: MouseEvent) {
         // when we click on mandelbrot canvas, draw corresponding julia set
         const c = mandelbrot.coordFromMousePosition(e.offsetX, e.offsetY);
